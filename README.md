@@ -45,6 +45,7 @@ A curated list of high-quality engineering and business-tech opportunities in th
 | **Sitecore** | CMS / MarTech | [Careers](https://www.sitecore.com/company/careers) | [LinkedIn](https://www.linkedin.com/company/sitecore/) |
 | **Skroutz** | E-commerce / Fintech | [Careers](https://apply.workable.com/skroutz/) | [LinkedIn](https://www.linkedin.com/company/skroutz-gr/) |
 | **SoftOne** | ERP / SaaS | [Careers](https://www.softone.gr/company/careers/) | [LinkedIn](https://www.linkedin.com/company/softone-technologies-s-a-/) |
+| **Sthenos AI** | Defense and Space Manufacturing / AI | [Careers](https://sthenos.ai/) | [LinkedIn](https://www.linkedin.com/company/sthenos-ai/) |
 | **ThinkDigital** | Digital Ads / Tech | [Careers](https://thinkdigitalgroup.net/careers/) | [LinkedIn](https://www.linkedin.com/company/thinkdigital/) |
 | **Upstream** | Mobile Marketing | [Careers](https://www.upstreamsystems.com/careers/) | [LinkedIn](https://www.linkedin.com/company/upstream/) |
 | **VIVA.com** | Fintech / Payments | [Careers](https://www.viva.com/en-gr/careers) | [LinkedIn](https://www.linkedin.com/company/vivacom-gr/) |
