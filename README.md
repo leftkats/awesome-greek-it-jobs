@@ -60,7 +60,7 @@ A curated list of high-quality engineering and business-tech opportunities in th
 
 ---
 
-## Usefull Notes
+## Useful Notes
 - **Remote vs. Hybrid:** Many Athens-based companies are moving to 1-2 days in office.
 - **Salary Insight:** Remote roles for international companies (via B2B) usually pay higher than local Greek contracts.
 - **Interview Prep:** Focus on System Design for Senior roles and LeetCode (Medium) for mid-level.
