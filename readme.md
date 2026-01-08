@@ -4,7 +4,7 @@ A comprehensive map of Greek tech companies, highlighting their focus sectors, c
 ---
 
 ## Engineering Hubs & Career Portals
-*A directory of 43 tech companies         in Greece with direct links to their jobs and LinkedIn presence.*
+*A directory of 44 tech companies         in Greece with direct links to their jobs and LinkedIn presence.*
 
 | Company | Focus Sector | Careers Page | LinkedIn Profile |
 | :--- | :--- | :--- | :--- |
@@ -51,6 +51,7 @@ A comprehensive map of Greek tech companies, highlighting their focus sectors, c
 | **VIVA.com** | Fintech / Payments | [Careers](https://www.viva.com/en-gr/careers) | [LinkedIn](https://www.linkedin.com/company/vivacom-gr) |
 | **Workable** | SaaS | [Careers](https://apply.workable.com/workable/) | [LinkedIn](https://www.linkedin.com/company/workable) |
 | **XM** | Fintech | [Careers](https://jobs.eu.lever.co/xm) | [LinkedIn](https://www.linkedin.com/company/xm-global) |
+| **Yodiwo** | IoT and Smart Systems | [Careers](https://www.yodiwo.gr/careers/) | [LinkedIn](https://www.linkedin.com/company/yodiwo) |
 
 ---
 ## Useful Search Queries
