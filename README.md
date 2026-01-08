@@ -27,6 +27,7 @@ A curated list of high-quality engineering and business-tech opportunities in th
 | **iTechScope** | Tech Recruitment | [Careers](https://www.itechscope.com/jobs/search) | [LinkedIn](https://www.linkedin.com/company/itechscope/) |
 | **Kaizen Gaming** | GameTech | [Careers](https://careers.kaizengaming.com/) | [LinkedIn](https://www.linkedin.com/company/kaizen-gaming/) |
 | **Kpler** | Data / Maritime | [Careers](https://www.kpler.com/company/careers) | [LinkedIn](https://www.linkedin.com/company/kpler/) |
+| **Moveo.ai** | AI / Fintech | [Careers](https://moveo-ai.notion.site/Careers-at-Moveo-AI-6f7204b1e4fd49098c623f623df0592d) | [LinkedIn](https://www.linkedin.com/company/moveo-ai/) |
 | **Mytilineos** | Energy / Digital | [Careers](https://www.mytilineos.gr/human-resources/career-opportunities/) | [LinkedIn](https://www.linkedin.com/company/mytilineos-sa/) |
 | **Netcompany-Intrasoft**| Software | [Careers](https://netcompany.com/careers/greece/) | [LinkedIn](https://www.linkedin.com/company/netcompany-intrasoft/) |
 | **Nokia** | Telecoms / Cloud | [Careers](https://careers.nokia.com/jobs/search/5858062) | [LinkedIn](https://www.linkedin.com/company/nokia/) |
