@@ -3,7 +3,7 @@ name: Update README on Merge
 on:
   push:
     branches:
-      - yodiwo
+      - main
 
 jobs:
   build-and-deploy:
