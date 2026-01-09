@@ -2,6 +2,8 @@ name: PR Check and Auto-Merge
 
 on:
   pull_request:
+    # This covers opened PRs, new commits (synchronize), and re-opened PRs
+    types: [opened, synchronize, reopened]
     paths:
       - 'data/companies.yaml'
       - 'data/queries.yaml'
@@ -14,9 +16,7 @@ permissions:
 
 jobs:
   auto-merge:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,29 +25,17 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            // 1. Find the open PR associated with this branch
-            const { data: pullRequests } = await github.rest.pulls.list({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-              head: `${context.repo.owner}:${github.event.workflow_run.head_branch}`
-            });
-
-            const pr = pullRequests[0];
-            if (!pr) {
-              console.log("No open pull request found.");
-              return;
-            }
-
+            const pr = context.payload.pull_request;
             const prNumber = pr.number;
             const baseBranch = pr.base.ref;
+            const headSha = pr.head.sha;
 
-            // 2. Check if rebase is needed
+            // 1. Check if rebase is needed (is head branch behind base?)
             const comparison = await github.rest.repos.compareCommits({
               owner: context.repo.owner,
               repo: context.repo.repo,
               base: baseBranch,
-              head: pr.head.sha,
+              head: headSha,
             });
 
             if (comparison.data.behind_by > 0) {
@@ -57,28 +45,33 @@ jobs:
                 issue_number: prNumber,
                 body: `⚠️ @${pr.user.login}, please rebase your branch with **${baseBranch}** before merging.`,
               });
-              core.setFailed("PR is out of date.");
+              core.setFailed("PR is out of date and needs a rebase.");
               return;
             }
 
-            // 3. Approve the PR
-            await github.rest.pulls.createReview({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: prNumber,
-              event: "APPROVE",
-              body: "Automated approval following successful CI checks."
-            });
+            // 2. Approve the PR
+            // Note: This may fail if you (the owner) are the one who opened the PR.
+            try {
+              await github.rest.pulls.createReview({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+                event: "APPROVE",
+                body: "Automated approval of the tech map contribution."
+              });
+            } catch (error) {
+              console.log("Could not approve (likely self-PR):", error.message);
+            }
 
-            // 4. Post the Thank You Comment
+            // 3. Post Thank You Comment
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
-              body: `Thanks for the contribution to the Greek Tech Map, @${pr.user.login}! Your changes are being merged now.`,
+              body: `Thanks for the contribution to the awesome-greek-tech-jobs, @${pr.user.login}! Your changes are being merged now.`,
             });
 
-            // 5. Squash and Merge
+            // 4. Squash and Merge
             await github.rest.pulls.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,
