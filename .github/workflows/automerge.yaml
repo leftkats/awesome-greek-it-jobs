@@ -64,7 +64,7 @@ jobs:
             core.setOutput("upToDate", "true");
           }
         env:
-          BASE_BRANCH: feature # Replace with your custom branch name
+          BASE_BRANCH: feature
         with:
           pr: ${{ steps.pr-info.outputs.pr }}
 
