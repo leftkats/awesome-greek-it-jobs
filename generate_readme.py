@@ -45,9 +45,9 @@ def generate():
     total_number_of_companies = len({c["name"] for c in all_companies})
     content += f"> A directory of *{total_number_of_companies}* tech companies in Greece with direct links to their jobs and LinkedIn presence.\n\n"
 
-    content += "| Company Name | Sectors | Careers | LinkedIn |\n"
-    content += "| :--- | :--- | :--- | :--- |\n"
-    for c in all_companies:
+    content += "| # | Company Name | Sectors | Careers | LinkedIn |\n"
+    content += "| :--- | :--- | :--- | :--- | :--- |\n"
+    for idx, c in enumerate(all_companies, start=1):
         company_url = c.get("url")
         if company_url:
             company_name_md = f"[{c['name']}]({company_url})"
@@ -67,7 +67,7 @@ def generate():
             ",".join(focus_sector) if isinstance(focus_sector, list) else focus_sector
         )
 
-        content += f"| **{company_name_md}** | {focus_sector} | {careers_link_md} | {linkedin_link_md} |\n"
+        content += f"| {idx} | **{company_name_md}** | {focus_sector} | {careers_link_md} | {linkedin_link_md} |\n"
     content += "\n---\n"
 
     if "queries" in queries_data:
