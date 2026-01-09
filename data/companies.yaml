@@ -607,3 +607,25 @@
     - iGaming
   careers_url: https://apply.workable.com/allwynls/
   linkedin_company_id: allwyn-lottery-solutions
+- name: Hellas Direct
+  url: https://www.hellasdirect.gr/
+  sectors:
+    - Insurtech
+    - Fintech
+  careers_url: https://www.hellasdirect.gr/kariera
+  linkedin_company_id: hellas-direct
+- name: EveryPay
+  url: https://www.everypay.gr/
+  sectors:
+    - Payments
+    - Fintech
+  careers_url: https://apply.workable.com/everypay-1/
+  linkedin_company_id: everypay
+- name: BestPrice
+  url: https://www.bestprice.gr/
+  sectors:
+    - E-commerce
+    - Price Comparison
+    - Technology
+  careers_url: https://www.bestprice.gr/careers
+  linkedin_company_id: bestprice-gr
