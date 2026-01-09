@@ -4,7 +4,7 @@ A comprehensive map of Greek tech companies, highlighting their focus sectors, c
 ---
 
 ## Engineering Hubs & Career Portals
-*A directory of 78 tech companies in Greece with direct links to their jobs and LinkedIn presence.*
+*A directory of 79 tech companies in Greece with direct links to their jobs and LinkedIn presence.*
 
 | Company | Focus Sector | Careers Page | LinkedIn Profile |
 | :--- | :--- | :--- | :--- |
@@ -72,6 +72,7 @@ A comprehensive map of Greek tech companies, highlighting their focus sectors, c
 | **[Sophea AI (KIEFER Group)](https://home.sophea.ai/)** | AI & Robotics | N/A | [LinkedIn](https://www.linkedin.com/company/sophea-ai) |
 | **[Spitogatos (Real Web Group)](https://www.spitogatos.gr/)** | PropTech & Real Estate Marketplace | [Careers](https://apply.workable.com/spitogatos-gr/) | N/A |
 | **[Spotawheel](https://www.spotawheel.com/)** | Automotive & E-commerce Platform | [Careers](https://apply.workable.com/spotawheel/) | N/A |
+| **[SquareDev](https://squaredev.io/)** | Data & AI Agency | [Careers](https://www.careers-page.com/squaredev) | N/A |
 | **[Sthenos AI](https://sthenos.ai)** | Defense and Space Manufacturing / AI | N/A | [LinkedIn](https://www.linkedin.com/company/sthenos-ai) |
 | **[Sui Foundation](https://sui.io/)** | Blockchain & Web3 | [Careers](https://jobs.sui.io/jobs) | [LinkedIn](https://www.linkedin.com/company/sui-foundation) |
 | **[ThinkDigital](https://thinkdigitalgroup.net/)** | Digital Ads / Tech | [Careers](https://thinkdigitalgroup.net/careers/) | [LinkedIn](https://www.linkedin.com/company/thinkdigital) |
