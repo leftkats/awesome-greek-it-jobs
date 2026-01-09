@@ -395,3 +395,8 @@
   url: https://www.travelmyth.com/
   sector: TravelTech
   linkedin_company_id: travelmyth
+- name: Yodeck
+  url: https://www.yodeck.com/
+  sector: Digital Signage
+  careers_url: https://www.yodeck.com/careers/
+  linkedin_company_id: flipnode-llc
