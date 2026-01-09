@@ -31,6 +31,7 @@ https://www.linkedin.com/company/**company-id**/.
       ```
 4. **Commit Changes**: Use a clear commit message like `feat: add [Company Name] to companies.yaml`.
 5. **Create Pull Request**: Go back to the original repository and click "New Pull Request".
+6. **Automated Review & Merge**: If your Pull Request passes the validation checks and follows the required format, our automated workflow will merge via a squash commit.
 
 ## Contribution Rules
 
