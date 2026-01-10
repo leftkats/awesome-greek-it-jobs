@@ -1,214 +1,2108 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Awesome Greek Tech Jobs | Production</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        "primary": "#000000",
-                        "background": "#ffffff",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"],
-                        "mono": ["JetBrains Mono", "monospace"]
-                    }
+                    colors: { "primary": "#000000", "background": "#ffffff" },
+                    fontFamily: { "display": ["Inter", "sans-serif"], "mono": ["JetBrains Mono", "monospace"] }
                 },
             },
         }
     </script>
     <style type="text/tailwindcss">
         @layer base {
-            body {
-                @apply bg-background text-black font-display antialiased;
-            }
-            .brutalist-border {
-                @apply border border-black;
-            }
-            .mono-text {
-                @apply font-mono uppercase tracking-tight;
-            }
-            .no-scrollbar::-webkit-scrollbar {
-                display: none;
-            }
-        }
-    </style>
-    <style>
-        body {
-            min-height: max(884px, 100dvh);
+            body { @apply bg-background text-black font-display antialiased; }
+            .brutalist-border { @apply border border-black; }
+            .mono-text { @apply font-mono uppercase tracking-tight; }
         }
     </style>
 </head>
-
 <body class="min-h-screen flex flex-col">
-    <div class="bg-black text-white px-4 py-2 brutalist-border border-t-0 border-l-0 border-r-0 flex items-start gap-3">
-        <span class="material-symbols-outlined text-sm mt-0.5">warning</span>
-        <p class="text-[10px] leading-tight mono-text font-bold">
-            NOTICE: Data accuracy is not guaranteed. Remote/Location fields are currently under construction and may
-            display placeholder information.
-        </p>
-    </div>
-    <nav
-        class="sticky top-0 z-50 bg-background brutalist-border border-t-0 border-l-0 border-r-0 px-4 py-4 flex items-center justify-between">
+    <nav class="sticky top-0 z-50 bg-background brutalist-border border-x-0 border-t-0 px-4 py-4 flex items-center justify-between">
         <div class="flex items-center gap-2">
             <span class="material-symbols-outlined text-xl">database</span>
-            <span class="font-bold text-xs mono-text">AGTJ // SOURCE.YAML</span>
+            <span class="font-bold text-xs mono-text">AGTJ // LIVE_FEED</span>
         </div>
-        <div class="flex gap-4">
-            <a class="flex items-center justify-center" href="https://github.com/itsthenoah/awesome-greek-tech-jobs">
-                <span class="material-symbols-outlined">terminal</span>
-            </a>
-        </div>
+        <a href="https://github.com/leftkats/awesome-greek-tech-jobs"><span class="material-symbols-outlined">terminal</span></a>
     </nav>
-    <header class="px-4 pt-8 pb-6 border-b brutalist-border border-t-0 border-l-0 border-r-0">
-        <h1 class="text-4xl font-extrabold leading-none tracking-tighter uppercase mb-4">
-            Awesome Greek<br />Tech Jobs
-        </h1>
-        <p class="text-xs font-bold leading-normal max-w-xs mono-text">
-            [A brutalist directory of high-growth Greek tech companies and career portals]
-        </p>
+
+    <header class="px-4 pt-8 pb-6 border-b brutalist-border border-x-0 border-t-0">
+        <h1 class="text-4xl font-extrabold tracking-tighter uppercase mb-4">Awesome Greek<br />Tech Jobs</h1>
+        <p class="text-xs font-bold mono-text max-w-xs">[A brutalist directory resolved from companies.yaml]</p>
     </header>
-    <section class="p-4 space-y-4">
-        <div class="flex flex-col gap-3">
-            <div class="flex brutalist-border bg-white overflow-hidden">
-                <div class="flex items-center justify-center px-3 border-r brutalist-border">
-                    <span class="material-symbols-outlined text-xl">search</span>
-                </div>
-                <input
-                    class="w-full p-3 text-xs mono-text border-none focus:ring-0 bg-transparent placeholder:text-gray-400"
-                    placeholder="Filter by company or stack..." type="text" />
-            </div>
-            <div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
-                <button
-                    class="flex items-center gap-2 brutalist-border px-3 py-1.5 bg-black text-white text-[10px] font-bold mono-text whitespace-nowrap">
-                    All Sectors
-                    <span class="material-symbols-outlined text-xs">expand_more</span>
-                </button>
-                <button
-                    class="flex items-center gap-2 brutalist-border px-3 py-1.5 bg-white text-black text-[10px] font-bold mono-text whitespace-nowrap">
-                    Work Policy
-                    <span class="material-symbols-outlined text-xs">expand_more</span>
-                </button>
-                <button
-                    class="flex items-center gap-2 brutalist-border px-3 py-1.5 bg-white text-black text-[10px] font-bold mono-text whitespace-nowrap">
-                    Engineering
-                    <span class="material-symbols-outlined text-xs">expand_more</span>
-                </button>
-            </div>
+
+    <section class="p-4">
+        <div class="flex brutalist-border bg-white overflow-hidden">
+            <div class="flex items-center justify-center px-3 border-r brutalist-border"><span class="material-symbols-outlined">search</span></div>
+            <input id="searchInput" class="w-full p-3 text-xs mono-text border-none focus:ring-0 bg-transparent" placeholder="FILTER BY COMPANY OR SECTOR..." type="text" onkeyup="filterData()" />
         </div>
     </section>
-    <div class="px-4 py-2 bg-black flex justify-between items-center brutalist-border border-l-0 border-r-0">
-        <span class="text-[9px] font-bold text-white mono-text tracking-widest">Repository Entry</span>
-        <span class="text-[9px] font-bold text-white mono-text tracking-widest">External</span>
+
+    <div class="px-4 py-2 bg-black flex justify-between items-center brutalist-border border-x-0">
+        <span class="text-[9px] font-bold text-white mono-text">YAML ENTRY</span>
+        <span class="text-[9px] font-bold text-white mono-text">EXTERNAL PORTAL</span>
     </div>
-    <main class="flex-grow">
-        <div class="hidden p-10 flex flex-col items-center justify-center border-b brutalist-border border-t-0 border-l-0 border-r-0"
-            id="state-loading">
-            <div class="w-8 h-8 brutalist-border border-t-transparent animate-spin mb-4"></div>
-            <span class="text-[10px] mono-text font-bold">Fetching YAML Data...</span>
-        </div>
-        <div class="hidden p-10 flex flex-col items-center justify-center border-b brutalist-border border-t-0 border-l-0 border-r-0 text-center"
-            id="state-empty">
-            <span class="material-symbols-outlined text-4xl mb-2">search_off</span>
-            <span class="text-[10px] mono-text font-bold uppercase">No companies match your filter criteria.</span>
-        </div>
-        <div class="flex flex-col" id="data-list">
-            <div class="flex p-4 brutalist-border border-t-0 border-l-0 border-r-0 hover:bg-gray-50 transition-colors">
-                <div class="flex-1 space-y-2">
-                    <div class="flex items-center gap-2">
-                        <h2 class="text-xl font-extrabold uppercase leading-none">Blueground</h2>
-                        <span
-                            class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">Remote</span>
-                    </div>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">PropTech</span>
-                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Series C</span>
-                    </div>
+
+    <main class="flex-grow" id="listContainer">
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Accenture" 
+             data-sectors="Strategy Consulting Technology Operations">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Accenture</h2>
+                    
                 </div>
-                <div class="flex items-center justify-end pl-4">
-                    <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95"
-                        href="#">
-                        <span class="material-symbols-outlined text-lg">open_in_new</span>
-                    </a>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Strategy</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Consulting</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Technology</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Operations</span>
+                    
                 </div>
             </div>
-            <div class="flex p-4 brutalist-border border-t-0 border-l-0 border-r-0 hover:bg-gray-50">
-                <div class="flex-1 space-y-2">
-                    <div class="flex items-center gap-2">
-                        <h2 class="text-xl font-extrabold uppercase leading-none">Skroutz</h2>
-                        <span
-                            class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">Hybrid</span>
-                    </div>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Marketplace</span>
-                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">E-Commerce</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-end pl-4">
-                    <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95"
-                        href="#">
-                        <span class="material-symbols-outlined text-lg">open_in_new</span>
-                    </a>
-                </div>
-            </div>
-            <div class="flex p-4 brutalist-border border-t-0 border-l-0 border-r-0 hover:bg-gray-50">
-                <div class="flex-1 space-y-2">
-                    <div class="flex items-center gap-2">
-                        <h2 class="text-xl font-extrabold uppercase leading-none">Workable</h2>
-                        <span
-                            class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">Remote</span>
-                    </div>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">SaaS</span>
-                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">HR Tech</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-end pl-4">
-                    <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95"
-                        href="#">
-                        <span class="material-symbols-outlined text-lg">open_in_new</span>
-                    </a>
-                </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.accenture.com/gr-en/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
             </div>
         </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Aegean Airlines" 
+             data-sectors="TravelTech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Aegean Airlines</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">TravelTech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://en.aegeanair.com/corporate/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Free Now" 
+             data-sectors="Mobility Tech Ride Hailing">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Free Now</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Mobility Tech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Ride Hailing</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://free-now.com/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Bespot" 
+             data-sectors="AI IoT RetailTech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Bespot</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IoT</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">RetailTech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/bespot/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Blueground" 
+             data-sectors="PropTech Real Estate">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Blueground</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">PropTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Real Estate</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/blueground/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="D-one" 
+             data-sectors="Software Development IT Services Data Consulting">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">D-one</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software Development</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Data</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Consulting</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/d-one/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="DeepSea" 
+             data-sectors="AI Data Maritime">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">DeepSea</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Data</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Maritime</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.deepsea.ai/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Deloitte" 
+             data-sectors="Consulting Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Deloitte</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Consulting</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://deloittecm.avature.net/en_US/careers/SearchJobs" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="efood" 
+             data-sectors="FoodTech Delivery E-commerce">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">efood</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">FoodTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Delivery</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">E-commerce</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://careers.deliveryhero.com/efood" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Elastic" 
+             data-sectors="Search Data Cloud">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Elastic</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Search</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Data</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Cloud</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://jobs.elastic.co/jobs/country/greece" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Epsilon Net" 
+             data-sectors="Software IT Services Cloud ERP">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Epsilon Net</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Cloud</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">ERP</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.epsilonnet.gr/career.aspx" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Eurobank" 
+             data-sectors="Banking Fintech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Eurobank</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Banking</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Fintech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.eurobank.gr/el/omilos/anthropino-dinamiko/eykairies-apasxolisis" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="European Dynamics" 
+             data-sectors="Software IT Services">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">European Dynamics</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.eurodyn.com/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="EY Greece" 
+             data-sectors="Assurance Tax Consulting Strategy">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">EY Greece</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Assurance</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tax</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Consulting</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Strategy</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.ey.com/en_gr/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Ferryhopper" 
+             data-sectors="TravelTech Booking Platform">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Ferryhopper</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">TravelTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Booking Platform</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://startup.jobs/companies/ferryhopper" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="iTechScope" 
+             data-sectors="Software IT Services Cloud">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">iTechScope</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Cloud</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.itechscope.com/jobs/search" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Kaizen Gaming" 
+             data-sectors="GameTech iGaming">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Kaizen Gaming</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">GameTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">iGaming</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://careers.kaizengaming.com/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Kpler" 
+             data-sectors="Data Analytics Maritime">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Kpler</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Data</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Analytics</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Maritime</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.kpler.com/company/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Mytilineos" 
+             data-sectors="Energy Industrials Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Mytilineos</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Energy</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Industrials</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.metlengroup.com/our-people/career-opportunities/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Netcompany-Intrasoft" 
+             data-sectors="IT Services Software Consulting">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Netcompany-Intrasoft</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Consulting</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://netcompany.com/careers/greece/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Nokia" 
+             data-sectors="Telecommunications 5G Network Infrastructure Networks">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Nokia</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Telecommunications</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">5G</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Network Infrastructure</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Networks</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://careers.nokia.com/jobs/search/5858062" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Novibet" 
+             data-sectors="GameTech iGaming Sports betting">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Novibet</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">GameTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">iGaming</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Sports betting</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/novibet/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Omilia" 
+             data-sectors="Conversational AI Voice Technology AI">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Omilia</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Conversational AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Voice Technology</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://omilia.com/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="OpenBet" 
+             data-sectors="Sports Betting iGaming">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">OpenBet</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Sports Betting</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">iGaming</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.openbet.com/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Orfium" 
+             data-sectors="Music Tech Rights Management AI">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Orfium</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Music Tech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Rights Management</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/orfium/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="PeopleCert" 
+             data-sectors="Certification IT Services Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">PeopleCert</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Certification</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.peoplecert.org/About-Us/Careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Persado" 
+             data-sectors="AI Marketing Tech Digital Marketing">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Persado</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Marketing Tech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Digital Marketing</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.persado.com/company/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Piraeus Bank" 
+             data-sectors="Banking Fintech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Piraeus Bank</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Banking</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Fintech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.piraeusgroup.gr/en/career/career-opportunities-in-piraeus-group" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Public Group" 
+             data-sectors="Retail E-commerce Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Public Group</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Retail</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">E-commerce</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://jobs.workable.com/company/6FKx25wcUhzj6towYPKDJF/jobs-at-public-group" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="PwC Greece" 
+             data-sectors="Consulting Tech Advisory">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">PwC Greece</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Consulting</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Advisory</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.pwc.gr/en/careers.html" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Satori Analytics" 
+             data-sectors="Data Big Data AI">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Satori Analytics</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Data</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Big Data</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Signal Group" 
+             data-sectors="Digital Transformation IT Services Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Signal Group</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Digital Transformation</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.thesignalgroup.com/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Sitecore" 
+             data-sectors="Digital Experience CMS Marketing Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Sitecore</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Digital Experience</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">CMS</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Marketing Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.sitecore.com/company/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Skroutz" 
+             data-sectors="E-commerce Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Skroutz</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">E-commerce</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/skroutz/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="ThinkDigital" 
+             data-sectors="Digital Marketing AdTech Media">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">ThinkDigital</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Digital Marketing</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AdTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Media</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://thinkdigitalgroup.net/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Upstream" 
+             data-sectors="Mobile Marketing AdTech SaaS Marketing Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Upstream</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Mobile Marketing</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AdTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">SaaS</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Marketing Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.upstreamsystems.com/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Viva.com" 
+             data-sectors="Fintech Payments E-commerce">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Viva.com</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Fintech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Payments</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">E-commerce</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.viva.com/el-gr/about/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Workable" 
+             data-sectors="HR Tech Recruitment Software SaaS">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Workable</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">HR Tech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Recruitment Software</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">SaaS</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/workable/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="XM" 
+             data-sectors="Fintech Trading Platform Investment Services">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">XM</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Fintech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Trading Platform</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Investment Services</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://jobs.eu.lever.co/xm" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Sthenos AI" 
+             data-sectors="AI Cybersecurity">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Sthenos AI</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Cybersecurity</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Moveo.ai" 
+             data-sectors="AI Automotive Smart Mobility">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Moveo.ai</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Automotive</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Smart Mobility</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://moveo-ai.notion.site/Careers-at-Moveo-AI-6f7204b1e4fd49098c623f623df0592d" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Yodiwo" 
+             data-sectors="IoT Platforms Smart Systems Edge Computing">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Yodiwo</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IoT Platforms</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Smart Systems</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Edge Computing</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.yodiwo.gr/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Qualcomm Greece" 
+             data-sectors="Semiconductors Telecommunications 5G">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Qualcomm Greece</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Semiconductors</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Telecommunications</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">5G</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="http://careers.qualcomm.com/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Uni Systems" 
+             data-sectors="ICT Systems Integration">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Uni Systems</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">ICT Systems Integration</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.unisystems.com/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Qualco" 
+             data-sectors="Financial Software Debt Management Solutions Fintech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Qualco</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Financial Software</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Debt Management Solutions</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Fintech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.qualco.eu/careers/open-positions" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Intracom Defense" 
+             data-sectors="Defense Technology Security IT Services">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Intracom Defense</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Defense Technology</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Security</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.intracomdefense.com/work-with-us/job-opportunities/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Alpha Bank" 
+             data-sectors="Banking">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Alpha Bank</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Banking</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://careers.alpha.gr/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Trasys (part of NRB Group)" 
+             data-sectors="IT Services Software Development Consulting">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Trasys (part of NRB Group)</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software Development</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Consulting</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://nrbcareers.com/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="RocketX" 
+             data-sectors="Venture Capital Startups Technology Investments">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">RocketX</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Venture Capital</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Startups</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Technology Investments</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Public Power Corporation S.A. (PPC / DEH)" 
+             data-sectors="Energy Utilities">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Public Power Corporation S.A. (PPC / DEH)</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Energy</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Utilities</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.ppcgroup.com/el/anthropino-dynamiko/efkairies-karieras/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Revotech" 
+             data-sectors="Automotive Technology EV Charging Solutions Smart Mobility">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Revotech</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Automotive Technology</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">EV Charging Solutions</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Smart Mobility</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://revotech.com/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Silvare" 
+             data-sectors="Software Development Recruitment">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Silvare</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software Development</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Recruitment</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://job-boards.eu.greenhouse.io/silvare" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Vodafone" 
+             data-sectors="Telecommunications">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Vodafone</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Telecommunications</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.vodafone.gr/vodafone-ellados/kariera" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Cosmote" 
+             data-sectors="Telecommunications">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Cosmote</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Telecommunications</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.cosmote.gr/static/otegroup/el/page/careers-bios" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Betsson Group" 
+             data-sectors="iGaming Entertainment Online Gaming">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Betsson Group</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">iGaming</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Entertainment</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Online Gaming</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://betssongroup.com/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Etraveli Group" 
+             data-sectors="TravelTech Online Travel Agency Booking Platform">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Etraveli Group</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">TravelTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Online Travel Agency</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Booking Platform</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.etraveligroup.com/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Dialectica" 
+             data-sectors="Market Research AI">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Dialectica</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Market Research</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.dialectica.io/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Dikaio AI" 
+             data-sectors="Legal Tech AI">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Dikaio AI</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Legal Tech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Sui Foundation" 
+             data-sectors="Blockchain Web3 Cryptocurrency">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Sui Foundation</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Blockchain</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Web3</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Cryptocurrency</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://jobs.sui.io/jobs" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Olympia Group" 
+             data-sectors="Retail FMCG Technology Innovation">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Olympia Group</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Retail</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">FMCG</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Technology</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Innovation</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.groupolympia.com/working-environment/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Ubitech" 
+             data-sectors="IT Services Software Development Cloud Solutions">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Ubitech</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software Development</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Cloud Solutions</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://ubitech.eu/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Entersoft & SoftOne Merger" 
+             data-sectors="ERP Business Software IT Servicess">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Entersoft & SoftOne Merger</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">ERP</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Business Software</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Servicess</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.smartcv.co/entersoft-softone" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Epam" 
+             data-sectors="Software Engineering Consulting Digital Platform Development">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Epam</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software Engineering</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Consulting</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Digital Platform Development</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.epam.com/careers/locations/greece" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Sophea AI (KIEFER Group)" 
+             data-sectors="AI Robotics">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Sophea AI (KIEFER Group)</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Robotics</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Plum Fintech" 
+             data-sectors="Fintech Personal Finance AI">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Plum Fintech</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Fintech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Personal Finance</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/withplum/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Intelligencia AI" 
+             data-sectors="AI Pharmaceuticals">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Intelligencia AI</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Pharmaceuticals</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.intelligencia.ai/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="ReDataset" 
+             data-sectors="Data AI">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">ReDataset</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Data</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Uplodio" 
+             data-sectors="Video Technology AI">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Uplodio</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Video Technology</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Papastratos" 
+             data-sectors="Tobacco Industry">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Papastratos</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Tobacco Industry</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://join.pmicareers.com/gb/en/search-results?q=&location=Greece" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Novelcore" 
+             data-sectors="AI Agency">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Novelcore</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Agency</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://novelcore.eu/join-team/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Elyos AI" 
+             data-sectors="AI Voice Technology Automation">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Elyos AI</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Voice Technology</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Automation</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://careers.elyos.ai/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Evenly" 
+             data-sectors="AI Accessibility Tech Inclusion Tech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Evenly</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">AI</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Accessibility Tech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Inclusion Tech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://evenly.care/contact-us-el.html" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Bewise" 
+             data-sectors="Digital Transformation ICT Managed Services">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Bewise</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Digital Transformation</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">ICT Managed Services</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.bewise.gr/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Wolt Greece" 
+             data-sectors="FoodTech E-commerce">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Wolt Greece</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">FoodTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">E-commerce</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://careers.wolt.com/en/jobs?locations=Greece&location=Greece" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Hack The Box" 
+             data-sectors="Cybersecurity Penetration Testing Security Training Security Labs">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Hack The Box</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Cybersecurity</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Penetration Testing</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Security Training</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Security Labs</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/hack-the-box-ltd/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Spotawheel" 
+             data-sectors="PropTech Used Car Marketplace">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Spotawheel</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">PropTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Used Car</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Marketplace</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/spotawheel/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Spitogatos" 
+             data-sectors="PropTech Real Estate">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Spitogatos</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">PropTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Real Estate</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/spitogatos-gr/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="SquareDev" 
+             data-sectors="Software Development IT Services Cloud Solutions">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">SquareDev</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Software Development</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">IT Services</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Cloud Solutions</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.careers-page.com/squaredev" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Travelmyth" 
+             data-sectors="TravelTech Booking Platform">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Travelmyth</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">TravelTech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Booking Platform</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Yodeck" 
+             data-sectors="Digital Signage">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Yodeck</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Digital Signage</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.yodeck.com/careers/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Allwyn" 
+             data-sectors="Lottery iGaming">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Allwyn</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Lottery</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">iGaming</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/allwynls/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="Hellas Direct" 
+             data-sectors="Insurtech Fintech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">Hellas Direct</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Insurtech</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Fintech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.hellasdirect.gr/kariera" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="EveryPay" 
+             data-sectors="Payments Fintech">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">EveryPay</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Payments</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Fintech</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://apply.workable.com/everypay-1/" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
+             data-name="BestPrice" 
+             data-sectors="E-commerce Price Comparison Technology">
+            <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-xl font-extrabold uppercase leading-none">BestPrice</h2>
+                    
+                </div>
+                <div class="flex flex-wrap gap-1">
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">E-commerce</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Price Comparison</span>
+                    
+                    <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Technology</span>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end pl-4">
+                <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95" href="https://www.bestprice.gr/careers" target="_blank">
+                    <span class="material-symbols-outlined text-lg">open_in_new</span>
+                </a>
+            </div>
+        </div>
+        
     </main>
-    <footer
-        class="p-8 flex flex-col items-center justify-center space-y-8 bg-white brutalist-border border-l-0 border-r-0 border-b-0">
-        <div class="flex gap-2">
-            <button class="brutalist-border px-4 py-2 font-bold mono-text text-xs">Prev</button>
-            <div class="brutalist-border px-4 py-2 font-bold mono-text text-xs bg-black text-white">01</div>
-            <button class="brutalist-border px-4 py-2 font-bold mono-text text-xs">Next</button>
-        </div>
-        <div class="flex flex-col items-center gap-4">
-            <a class="brutalist-border px-6 py-3 font-bold mono-text text-xs flex items-center gap-2 hover:bg-black hover:text-white transition-colors"
-                href="https://github.com/itsthenoah/awesome-greek-tech-jobs">
-                <span class="material-symbols-outlined text-sm">terminal</span>
-                VIEW ON GITHUB
-            </a>
-            <div class="text-center">
-                <p class="text-[9px] font-bold mono-text opacity-40">Deployed via GitHub Pages</p>
-                <p class="text-[9px] font-bold mono-text opacity-40">Maintained by the Community</p>
-            </div>
-        </div>
+
+    <footer class="p-8 flex flex-col items-center justify-center bg-white border-t brutalist-border">
+        <p class="text-[9px] font-bold mono-text opacity-40">LAST BUILD: 2026-01-10 14:01</p>
     </footer>
-    <div class="fixed bottom-6 right-6">
-        <button
-            class="bg-black text-white w-14 h-14 brutalist-border flex items-center justify-center active:translate-x-0.5 active:translate-y-0.5">
-            <span class="material-symbols-outlined text-2xl">add</span>
-        </button>
-    </div>
 
+    <script>
+        function filterData() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.getElementsByClassName('company-card');
+            for (let card of cards) {
+                const searchStr = (card.dataset.name + ' ' + card.dataset.sectors).toLowerCase();
+                card.style.display = searchStr.includes(query) ? 'flex' : 'none';
+            }
+        }
+    </script>
 </body>
-
 </html>
