@@ -23,36 +23,40 @@
             body { @apply bg-background text-black font-display antialiased; }
             .brutalist-border { @apply border border-black; }
             .mono-text { @apply font-mono uppercase tracking-tight; }
+            .no-scrollbar::-webkit-scrollbar { display: none; }
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
+    <div class="bg-black text-white px-4 py-3 brutalist-border border-x-0 border-t-0 flex items-start gap-3">
+        <span class="material-symbols-outlined text-sm mt-0.5">warning</span>
+        <div class="text-[11px] leading-tight uppercase font-bold tracking-tight">
+            NOTICE: This is a statically generated site. Data accuracy is dependent on source repository updates. 
+            <span class="text-yellow-400 underline underline-offset-2">Remote/Location policies are currently under construction</span> and may not reflect real-time changes.
+        </div>
+    </div>
+
     <nav class="sticky top-0 z-50 bg-background brutalist-border border-x-0 border-t-0 px-4 py-4 flex items-center justify-between">
         <div class="flex items-center gap-2">
             <span class="material-symbols-outlined text-xl">database</span>
-            <span class="font-bold text-xs mono-text">AGTJ // LIVE_FEED</span>
+            <span class="font-bold text-xs mono-text">AGTJ // SOURCE.YAML</span>
         </div>
         <a href="https://github.com/leftkats/awesome-greek-tech-jobs"><span class="material-symbols-outlined">terminal</span></a>
     </nav>
 
     <header class="px-4 pt-8 pb-6 border-b brutalist-border border-x-0 border-t-0">
         <h1 class="text-4xl font-extrabold tracking-tighter uppercase mb-4">Awesome Greek<br />Tech Jobs</h1>
-        <p class="text-xs font-bold mono-text max-w-xs">[A brutalist directory resolved from companies.yaml]</p>
+        <p class="text-xs font-bold mono-text max-w-xs">[A brutalist directory of high-growth Greek tech companies]</p>
     </header>
 
     <section class="p-4">
         <div class="flex brutalist-border bg-white overflow-hidden">
             <div class="flex items-center justify-center px-3 border-r brutalist-border"><span class="material-symbols-outlined">search</span></div>
-            <input id="searchInput" class="w-full p-3 text-xs mono-text border-none focus:ring-0 bg-transparent" placeholder="FILTER BY COMPANY OR SECTOR..." type="text" onkeyup="filterData()" />
+            <input id="searchInput" class="w-full p-3 text-xs mono-text border-none focus:ring-0 bg-transparent" placeholder="Filter by company or sector..." type="text" onkeyup="filterData()" />
         </div>
     </section>
 
-    <div class="px-4 py-2 bg-black flex justify-between items-center brutalist-border border-x-0">
-        <span class="text-[9px] font-bold text-white mono-text">YAML ENTRY</span>
-        <span class="text-[9px] font-bold text-white mono-text">EXTERNAL PORTAL</span>
-    </div>
-
-    <main class="flex-grow" id="listContainer">
+    <main class="flex-grow" id="companyList">
         
         <div class="company-card flex p-4 brutalist-border border-t-0 border-x-0 hover:bg-gray-50 transition-colors" 
              data-name="Accenture" 
@@ -60,7 +64,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Accenture</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -87,7 +91,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Aegean Airlines</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -108,7 +112,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Free Now</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -131,7 +135,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Bespot</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -156,7 +160,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Blueground</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -179,7 +183,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">D-one</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -206,7 +210,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">DeepSea</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -231,7 +235,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Deloitte</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -254,7 +258,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">efood</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -279,7 +283,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Elastic</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -304,7 +308,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Epsilon Net</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -331,7 +335,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Eurobank</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -354,7 +358,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">European Dynamics</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -377,7 +381,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">EY Greece</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -404,7 +408,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Ferryhopper</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -427,7 +431,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">iTechScope</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -452,7 +456,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Kaizen Gaming</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -475,7 +479,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Kpler</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -500,7 +504,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Mytilineos</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -525,7 +529,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Netcompany-Intrasoft</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -550,7 +554,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Nokia</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -577,7 +581,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Novibet</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -602,7 +606,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Omilia</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -627,7 +631,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">OpenBet</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -650,7 +654,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Orfium</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -675,7 +679,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">PeopleCert</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -700,7 +704,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Persado</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -725,7 +729,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Piraeus Bank</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -748,7 +752,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Public Group</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -773,7 +777,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">PwC Greece</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -798,7 +802,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Satori Analytics</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -823,7 +827,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Signal Group</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -848,7 +852,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Sitecore</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -873,7 +877,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Skroutz</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -896,7 +900,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">ThinkDigital</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -921,7 +925,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Upstream</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -948,7 +952,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Viva.com</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -973,7 +977,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Workable</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -998,7 +1002,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">XM</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1023,7 +1027,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Sthenos AI</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1046,7 +1050,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Moveo.ai</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1071,7 +1075,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Yodiwo</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1096,7 +1100,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Qualcomm Greece</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1121,7 +1125,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Uni Systems</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1142,7 +1146,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Qualco</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1167,7 +1171,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Intracom Defense</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1192,7 +1196,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Alpha Bank</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1213,7 +1217,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Trasys (part of NRB Group)</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1238,7 +1242,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">RocketX</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1263,7 +1267,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Public Power Corporation S.A. (PPC / DEH)</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1286,7 +1290,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Revotech</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1311,7 +1315,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Silvare</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1334,7 +1338,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Vodafone</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1355,7 +1359,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Cosmote</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1376,7 +1380,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Betsson Group</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1401,7 +1405,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Etraveli Group</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1426,7 +1430,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Dialectica</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1449,7 +1453,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Dikaio AI</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1472,7 +1476,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Sui Foundation</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1497,7 +1501,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Olympia Group</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1524,7 +1528,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Ubitech</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1549,7 +1553,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Entersoft & SoftOne Merger</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1574,7 +1578,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Epam</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1599,7 +1603,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Sophea AI (KIEFER Group)</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1622,7 +1626,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Plum Fintech</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1647,7 +1651,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Intelligencia AI</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1670,7 +1674,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">ReDataset</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1693,7 +1697,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Uplodio</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1716,7 +1720,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Papastratos</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1737,7 +1741,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Novelcore</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1760,7 +1764,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Elyos AI</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1785,7 +1789,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Evenly</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1810,7 +1814,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Bewise</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1833,7 +1837,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Wolt Greece</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1856,7 +1860,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Hack The Box</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1883,7 +1887,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Spotawheel</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1908,7 +1912,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Spitogatos</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1931,7 +1935,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">SquareDev</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1956,7 +1960,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Travelmyth</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -1979,7 +1983,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Yodeck</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -2000,7 +2004,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Allwyn</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -2023,7 +2027,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">Hellas Direct</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -2046,7 +2050,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">EveryPay</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -2069,7 +2073,7 @@
             <div class="flex-1 space-y-2">
                 <div class="flex items-center gap-2">
                     <h2 class="text-xl font-extrabold uppercase leading-none">BestPrice</h2>
-                    
+                    <span class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">GREECE</span>
                 </div>
                 <div class="flex flex-wrap gap-1">
                     
@@ -2090,8 +2094,8 @@
         
     </main>
 
-    <footer class="p-8 flex flex-col items-center justify-center bg-white border-t brutalist-border">
-        <p class="text-[9px] font-bold mono-text opacity-40">LAST BUILD: 2026-01-10 14:01</p>
+    <footer class="p-8 flex flex-col items-center justify-center border-t brutalist-border border-x-0">
+        <p class="text-[9px] font-bold mono-text opacity-40 uppercase">Last Build: 2026-01-10 14:05</p>
     </footer>
 
     <script>
