@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Awesome Greek Tech Jobs | Production</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-background text-black font-display antialiased;
+            }
+            .brutalist-border {
+                @apply border border-black;
+            }
+            .mono-text {
+                @apply font-mono uppercase tracking-tight;
+            }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <div class="bg-black text-white px-4 py-2 brutalist-border border-t-0 border-l-0 border-r-0 flex items-start gap-3">
+        <span class="material-symbols-outlined text-sm mt-0.5">warning</span>
+        <p class="text-[10px] leading-tight mono-text font-bold">
+            NOTICE: Data accuracy is not guaranteed. Remote/Location fields are currently under construction and may
+            display placeholder information.
+        </p>
+    </div>
+    <nav
+        class="sticky top-0 z-50 bg-background brutalist-border border-t-0 border-l-0 border-r-0 px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-xl">database</span>
+            <span class="font-bold text-xs mono-text">AGTJ // SOURCE.YAML</span>
+        </div>
+        <div class="flex gap-4">
+            <a class="flex items-center justify-center" href="https://github.com/itsthenoah/awesome-greek-tech-jobs">
+                <span class="material-symbols-outlined">terminal</span>
+            </a>
+        </div>
+    </nav>
+    <header class="px-4 pt-8 pb-6 border-b brutalist-border border-t-0 border-l-0 border-r-0">
+        <h1 class="text-4xl font-extrabold leading-none tracking-tighter uppercase mb-4">
+            Awesome Greek<br />Tech Jobs
+        </h1>
+        <p class="text-xs font-bold leading-normal max-w-xs mono-text">
+            [A brutalist directory of high-growth Greek tech companies and career portals]
+        </p>
+    </header>
+    <section class="p-4 space-y-4">
+        <div class="flex flex-col gap-3">
+            <div class="flex brutalist-border bg-white overflow-hidden">
+                <div class="flex items-center justify-center px-3 border-r brutalist-border">
+                    <span class="material-symbols-outlined text-xl">search</span>
+                </div>
+                <input
+                    class="w-full p-3 text-xs mono-text border-none focus:ring-0 bg-transparent placeholder:text-gray-400"
+                    placeholder="Filter by company or stack..." type="text" />
+            </div>
+            <div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+                <button
+                    class="flex items-center gap-2 brutalist-border px-3 py-1.5 bg-black text-white text-[10px] font-bold mono-text whitespace-nowrap">
+                    All Sectors
+                    <span class="material-symbols-outlined text-xs">expand_more</span>
+                </button>
+                <button
+                    class="flex items-center gap-2 brutalist-border px-3 py-1.5 bg-white text-black text-[10px] font-bold mono-text whitespace-nowrap">
+                    Work Policy
+                    <span class="material-symbols-outlined text-xs">expand_more</span>
+                </button>
+                <button
+                    class="flex items-center gap-2 brutalist-border px-3 py-1.5 bg-white text-black text-[10px] font-bold mono-text whitespace-nowrap">
+                    Engineering
+                    <span class="material-symbols-outlined text-xs">expand_more</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <div class="px-4 py-2 bg-black flex justify-between items-center brutalist-border border-l-0 border-r-0">
+        <span class="text-[9px] font-bold text-white mono-text tracking-widest">Repository Entry</span>
+        <span class="text-[9px] font-bold text-white mono-text tracking-widest">External</span>
+    </div>
+    <main class="flex-grow">
+        <div class="hidden p-10 flex flex-col items-center justify-center border-b brutalist-border border-t-0 border-l-0 border-r-0"
+            id="state-loading">
+            <div class="w-8 h-8 brutalist-border border-t-transparent animate-spin mb-4"></div>
+            <span class="text-[10px] mono-text font-bold">Fetching YAML Data...</span>
+        </div>
+        <div class="hidden p-10 flex flex-col items-center justify-center border-b brutalist-border border-t-0 border-l-0 border-r-0 text-center"
+            id="state-empty">
+            <span class="material-symbols-outlined text-4xl mb-2">search_off</span>
+            <span class="text-[10px] mono-text font-bold uppercase">No companies match your filter criteria.</span>
+        </div>
+        <div class="flex flex-col" id="data-list">
+            <div class="flex p-4 brutalist-border border-t-0 border-l-0 border-r-0 hover:bg-gray-50 transition-colors">
+                <div class="flex-1 space-y-2">
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xl font-extrabold uppercase leading-none">Blueground</h2>
+                        <span
+                            class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">Remote</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">PropTech</span>
+                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Series C</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end pl-4">
+                    <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+            <div class="flex p-4 brutalist-border border-t-0 border-l-0 border-r-0 hover:bg-gray-50">
+                <div class="flex-1 space-y-2">
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xl font-extrabold uppercase leading-none">Skroutz</h2>
+                        <span
+                            class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">Hybrid</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">Marketplace</span>
+                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">E-Commerce</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end pl-4">
+                    <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+            <div class="flex p-4 brutalist-border border-t-0 border-l-0 border-r-0 hover:bg-gray-50">
+                <div class="flex-1 space-y-2">
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-xl font-extrabold uppercase leading-none">Workable</h2>
+                        <span
+                            class="text-[9px] brutalist-border px-1.5 py-0.5 font-bold mono-text bg-white">Remote</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">SaaS</span>
+                        <span class="text-[9px] mono-text border border-black/20 px-1 py-0.5">HR Tech</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end pl-4">
+                    <a class="brutalist-border p-3 flex items-center justify-center hover:bg-black hover:text-white transition-all active:scale-95"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer
+        class="p-8 flex flex-col items-center justify-center space-y-8 bg-white brutalist-border border-l-0 border-r-0 border-b-0">
+        <div class="flex gap-2">
+            <button class="brutalist-border px-4 py-2 font-bold mono-text text-xs">Prev</button>
+            <div class="brutalist-border px-4 py-2 font-bold mono-text text-xs bg-black text-white">01</div>
+            <button class="brutalist-border px-4 py-2 font-bold mono-text text-xs">Next</button>
+        </div>
+        <div class="flex flex-col items-center gap-4">
+            <a class="brutalist-border px-6 py-3 font-bold mono-text text-xs flex items-center gap-2 hover:bg-black hover:text-white transition-colors"
+                href="https://github.com/itsthenoah/awesome-greek-tech-jobs">
+                <span class="material-symbols-outlined text-sm">terminal</span>
+                VIEW ON GITHUB
+            </a>
+            <div class="text-center">
+                <p class="text-[9px] font-bold mono-text opacity-40">Deployed via GitHub Pages</p>
+                <p class="text-[9px] font-bold mono-text opacity-40">Maintained by the Community</p>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed bottom-6 right-6">
+        <button
+            class="bg-black text-white w-14 h-14 brutalist-border flex items-center justify-center active:translate-x-0.5 active:translate-y-0.5">
+            <span class="material-symbols-outlined text-2xl">add</span>
+        </button>
+    </div>
+
+</body>
+
+</html>
