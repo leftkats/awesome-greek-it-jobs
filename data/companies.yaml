@@ -265,7 +265,7 @@
     - Rights Management
     - AI
   careers_url: https://apply.workable.com/orfium/
-  linkedin_company_id:
+  linkedin_company_id: orfium
   locations:
     - Athens
   work_policy: hybrid
@@ -371,7 +371,7 @@
     - AdTech
     - Media
   careers_url: https://thinkdigitalgroup.net/careers/
-  linkedin_company_id:
+  linkedin_company_id: thinkdigital
   locations:
     - Athens
     - Patras
@@ -465,7 +465,7 @@
   sectors:
     - ICT Systems Integration
   careers_url: https://www.unisystems.com/careers
-  linkedin_company_id: 
+  linkedin_company_id: uni-systems
   locations:
     - Athens
   work_policy: hybrid
@@ -476,7 +476,7 @@
     - Debt Management Solutions
     - Fintech
   careers_url: https://www.qualco.eu/careers/open-positions
-  linkedin_company_id: 
+  linkedin_company_id: qualco
   locations:
     - Athens
   work_policy: hybrid
@@ -566,7 +566,7 @@
     - Entertainment
     - Online Gaming
   careers_url: https://betssongroup.com/careers/
-  linkedin_company_id: betsson-
+  linkedin_company_id: betsson-group
   locations:
     - Athens
   work_policy: on-site
