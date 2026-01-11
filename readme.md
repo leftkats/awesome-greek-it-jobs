@@ -6,7 +6,7 @@ A comprehensive map of Greek tech companies, highlighting their focus sectors, c
 ---
 
 ## Engineering Hubs & Career Portals
-> A directory of *84* tech companies in Greece with direct links to their jobs and LinkedIn presence.
+> A directory of *85* tech companies in Greece with direct links to their jobs and LinkedIn presence.
 
 | # | Company Name | Sectors | Careers | LinkedIn |
 | :--- | :--- | :--- | :--- | :--- |
