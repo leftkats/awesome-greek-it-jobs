@@ -51,6 +51,13 @@ template_str = """
 <!DOCTYPE html>
 <html class="light" lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R41TD0DEQB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-R41TD0DEQB');
+    </script>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Awesome Greek Tech Jobs</title>
