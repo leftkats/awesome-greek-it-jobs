@@ -1,5 +1,5 @@
 import yaml
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 
 def generate():
@@ -43,7 +43,24 @@ def generate():
 
     content += "## Engineering Hubs & Career Portals\n"
     total_number_of_companies = len({c["name"] for c in all_companies})
-    content += f"> A directory of *{total_number_of_companies}* tech companies in Greece with direct links to their jobs and LinkedIn presence.\n\n"
+
+    loc_counts = Counter(
+        [loc.strip().title() for c in all_companies for loc in c.get("locations", "")]
+    )
+
+    top_loc, top_count = loc_counts.most_common(1)[0]
+
+    policy_counts = Counter(
+        [c.get("work_policy", "n/a").strip().title() for c in all_companies]
+    )
+
+    remote_count = policy_counts.get("remote", 0)
+    remote_pct = (remote_count / len(all_companies)) * 100
+
+    content += (
+        f"> A community-driven hub featuring **{total_number_of_companies}** unique tech teams. "
+        f"With **{top_count}** offices in **{top_loc}**.\n\n"
+    )
 
     content += "| # | Company Name | Sectors | Careers | LinkedIn |\n"
     content += "| :--- | :--- | :--- | :--- | :--- |\n"
