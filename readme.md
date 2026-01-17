@@ -7,7 +7,7 @@ This a comprehensive map of companies that hire for tech jobs in Greece. It high
 ---
 
 ## Engineering Hubs & Career Portals
-> A community-driven hub featuring **125** unique tech teams. With **83** offices in **Athens**.
+> A community-driven hub featuring **126** unique tech teams. With **83** offices in **Athens**.
 
 | # | Company Name | Sectors | Careers | LinkedIn |
 | :--- | :--- | :--- | :--- | :--- |
@@ -113,29 +113,30 @@ This a comprehensive map of companies that hire for tech jobs in Greece. It high
 | 100 | **[Sui Foundation](https://sui.io/)** | Blockchain,Web3,Cryptocurrency | [Careers](https://jobs.sui.io/jobs) | [LinkedIn](https://www.linkedin.com/company/sui-foundation) |
 | 101 | **[Sword Group](https://www.sword-group.com/)** | Consulting,IT Services | [Careers](https://www.sword-group.com/careers/) | [LinkedIn](https://www.linkedin.com/company/sword-group) |
 | 102 | **[Synelixis Solutions SA](https://synelixis.com/)** | Telecommunications,Networking,Sensory,Automation | [Careers](https://synelixis.com/career/) | [LinkedIn](https://www.linkedin.com/company/synelixis-solutions-ltd) |
-| 103 | **[Techbridge Global](https://techbridgeglobal.io/)** | Technology,Information,Internet,Employment Solutions | [Careers](https://techbridge.org/careers/) | [LinkedIn](https://www.linkedin.com/company/techbridgeltd) |
-| 104 | **[tgndata](https://tgndata.com/)** | Technology,Price Intelligence | [Careers](https://apply.workable.com/tgndata) | [LinkedIn](https://www.linkedin.com/company/tgndata) |
-| 105 | **[THEON INTERNATIONAL](https://theon.com/)** | Advance Optronics,Thermal Imaging,Night Vision | [Careers](https://theon.com/career/job-opportunities/) | [LinkedIn](https://www.linkedin.com/company/theon-international) |
-| 106 | **[ThinkDigital](https://thinkdigitalgroup.net/)** | Digital Marketing,AdTech,Media | [Careers](https://thinkdigitalgroup.net/careers/) | [LinkedIn](https://www.linkedin.com/company/thinkdigital) |
-| 107 | **[Toptal](https://www.toptal.com/)** | Freelance Platforms | [Careers](https://www.toptal.com/careers) | [LinkedIn](https://www.linkedin.com/company/toptal) |
-| 108 | **[Trasys (part of NRB Group)](https://trasys.gr/)** | IT Services,Software Development,Consulting | [Careers](https://nrbcareers.com/) | [LinkedIn](https://www.linkedin.com/company/trasys) |
-| 109 | **[Travelmyth](https://www.travelmyth.com/)** | TravelTech,Booking Platform |  | [LinkedIn](https://www.linkedin.com/company/travelmyth) |
-| 110 | **[Ubitech](https://ubitech.eu/)** | IT Services,Software Development,Cloud Solutions | [Careers](https://ubitech.eu/careers/) | [LinkedIn](https://www.linkedin.com/company/ubitech) |
-| 111 | **[Uni Systems](https://www.unisystems.com/)** | ICT Systems Integration | [Careers](https://www.unisystems.com/careers) | [LinkedIn](https://www.linkedin.com/company/uni-systems) |
-| 112 | **[UpcoMinds](https://upcominds.com/)** | Consulting,IT Services | [Careers](https://upcominds.com/career/) | [LinkedIn](https://www.linkedin.com/company/upcominds) |
-| 113 | **[Uplodio](https://www.uplodio.com/)** | Video Technology,AI |  | [LinkedIn](https://www.linkedin.com/company/uplodio) |
-| 114 | **[Upstream](https://www.upstreamsystems.com/)** | Mobile Marketing,AdTech,SaaS,Marketing Tech | [Careers](https://www.upstreamsystems.com/careers/) | [LinkedIn](https://www.linkedin.com/company/upstream) |
-| 115 | **[Validata Group](https://www.validata-software.com/)** | Fintech,AI,Banktech | [Careers](https://www.validata-software.com/company/career/) | [LinkedIn](https://www.linkedin.com/company/validata-group) |
-| 116 | **[Viva.com](https://www.viva.gr/)** | Fintech,Payments,E-commerce | [Careers](https://www.viva.com/el-gr/about/careers) | [LinkedIn](https://www.linkedin.com/company/viva-com) |
-| 117 | **[Vodafone](https://www.vodafone.gr/)** | Telecommunications | [Careers](https://www.vodafone.gr/vodafone-ellados/kariera) | [LinkedIn](https://www.linkedin.com/company/vodafone) |
-| 118 | **[Welcome Pickups](https://www.welcomepickups.com/)** | Travel,Transportation,Hospitality,Travel Tech | [Careers](https://apply.workable.com/welcome/) | [LinkedIn](https://www.linkedin.com/company/welcomepickups) |
-| 119 | **[wherewework Hellas](https://www.wherewework.gr/el)** | Human Resources |  | [LinkedIn](https://www.linkedin.com/company/wherewework-gr) |
-| 120 | **[Wolt Greece](https://wolt.com/en/grc)** | FoodTech,E-commerce | [Careers](https://careers.wolt.com/en/jobs?locations=Greece&location=Greece) | [LinkedIn](https://www.linkedin.com/company/wolt-oy) |
-| 121 | **[Workable](https://www.workable.com/)** | HR Tech,Recruitment Software,SaaS | [Careers](https://apply.workable.com/careers/) | [LinkedIn](https://www.linkedin.com/company/workable) |
-| 122 | **[WorkEthix](https://workethixrec.com/)** | Recruitment,IT Services,Consulting | [Careers](https://workethixrec.com/jobs) | [LinkedIn](https://www.linkedin.com/company/workethix) |
-| 123 | **[XM](https://www.xm.com/)** | Fintech,Trading Platform,Investment Services | [Careers](https://jobs.eu.lever.co/xm) | [LinkedIn](https://www.linkedin.com/company/xm-global) |
-| 124 | **[Yodeck](https://www.yodeck.com/)** | Digital Signage | [Careers](https://www.yodeck.com/careers/) | [LinkedIn](https://www.linkedin.com/company/flipnode-llc) |
-| 125 | **[Yodiwo](https://www.yodiwo.gr/)** | IoT,Smart Systems,Edge Computing,Consulting | [Careers](https://www.yodiwo.gr/careers/) | [LinkedIn](https://www.linkedin.com/company/yodiwo) |
+| 103 | **[team.blue](https://team.blue/)** | Software Development | [Careers](https://team.blue/careers/) | [LinkedIn](https://www.linkedin.com/company/teamblue) |
+| 104 | **[Techbridge Global](https://techbridgeglobal.io/)** | Technology,Information,Internet,Employment Solutions | [Careers](https://techbridge.org/careers/) | [LinkedIn](https://www.linkedin.com/company/techbridgeltd) |
+| 105 | **[tgndata](https://tgndata.com/)** | Technology,Price Intelligence | [Careers](https://apply.workable.com/tgndata) | [LinkedIn](https://www.linkedin.com/company/tgndata) |
+| 106 | **[THEON INTERNATIONAL](https://theon.com/)** | Advance Optronics,Thermal Imaging,Night Vision | [Careers](https://theon.com/career/job-opportunities/) | [LinkedIn](https://www.linkedin.com/company/theon-international) |
+| 107 | **[ThinkDigital](https://thinkdigitalgroup.net/)** | Digital Marketing,AdTech,Media | [Careers](https://thinkdigitalgroup.net/careers/) | [LinkedIn](https://www.linkedin.com/company/thinkdigital) |
+| 108 | **[Toptal](https://www.toptal.com/)** | Freelance Platforms | [Careers](https://www.toptal.com/careers) | [LinkedIn](https://www.linkedin.com/company/toptal) |
+| 109 | **[Trasys (part of NRB Group)](https://trasys.gr/)** | IT Services,Software Development,Consulting | [Careers](https://nrbcareers.com/) | [LinkedIn](https://www.linkedin.com/company/trasys) |
+| 110 | **[Travelmyth](https://www.travelmyth.com/)** | TravelTech,Booking Platform |  | [LinkedIn](https://www.linkedin.com/company/travelmyth) |
+| 111 | **[Ubitech](https://ubitech.eu/)** | IT Services,Software Development,Cloud Solutions | [Careers](https://ubitech.eu/careers/) | [LinkedIn](https://www.linkedin.com/company/ubitech) |
+| 112 | **[Uni Systems](https://www.unisystems.com/)** | ICT Systems Integration | [Careers](https://www.unisystems.com/careers) | [LinkedIn](https://www.linkedin.com/company/uni-systems) |
+| 113 | **[UpcoMinds](https://upcominds.com/)** | Consulting,IT Services | [Careers](https://upcominds.com/career/) | [LinkedIn](https://www.linkedin.com/company/upcominds) |
+| 114 | **[Uplodio](https://www.uplodio.com/)** | Video Technology,AI |  | [LinkedIn](https://www.linkedin.com/company/uplodio) |
+| 115 | **[Upstream](https://www.upstreamsystems.com/)** | Mobile Marketing,AdTech,SaaS,Marketing Tech | [Careers](https://www.upstreamsystems.com/careers/) | [LinkedIn](https://www.linkedin.com/company/upstream) |
+| 116 | **[Validata Group](https://www.validata-software.com/)** | Fintech,AI,Banktech | [Careers](https://www.validata-software.com/company/career/) | [LinkedIn](https://www.linkedin.com/company/validata-group) |
+| 117 | **[Viva.com](https://www.viva.gr/)** | Fintech,Payments,E-commerce | [Careers](https://www.viva.com/el-gr/about/careers) | [LinkedIn](https://www.linkedin.com/company/viva-com) |
+| 118 | **[Vodafone](https://www.vodafone.gr/)** | Telecommunications | [Careers](https://www.vodafone.gr/vodafone-ellados/kariera) | [LinkedIn](https://www.linkedin.com/company/vodafone) |
+| 119 | **[Welcome Pickups](https://www.welcomepickups.com/)** | Travel,Transportation,Hospitality,Travel Tech | [Careers](https://apply.workable.com/welcome/) | [LinkedIn](https://www.linkedin.com/company/welcomepickups) |
+| 120 | **[wherewework Hellas](https://www.wherewework.gr/el)** | Human Resources |  | [LinkedIn](https://www.linkedin.com/company/wherewework-gr) |
+| 121 | **[Wolt Greece](https://wolt.com/en/grc)** | FoodTech,E-commerce | [Careers](https://careers.wolt.com/en/jobs?locations=Greece&location=Greece) | [LinkedIn](https://www.linkedin.com/company/wolt-oy) |
+| 122 | **[Workable](https://www.workable.com/)** | HR Tech,Recruitment Software,SaaS | [Careers](https://apply.workable.com/careers/) | [LinkedIn](https://www.linkedin.com/company/workable) |
+| 123 | **[WorkEthix](https://workethixrec.com/)** | Recruitment,IT Services,Consulting | [Careers](https://workethixrec.com/jobs) | [LinkedIn](https://www.linkedin.com/company/workethix) |
+| 124 | **[XM](https://www.xm.com/)** | Fintech,Trading Platform,Investment Services | [Careers](https://jobs.eu.lever.co/xm) | [LinkedIn](https://www.linkedin.com/company/xm-global) |
+| 125 | **[Yodeck](https://www.yodeck.com/)** | Digital Signage | [Careers](https://www.yodeck.com/careers/) | [LinkedIn](https://www.linkedin.com/company/flipnode-llc) |
+| 126 | **[Yodiwo](https://www.yodiwo.gr/)** | IoT,Smart Systems,Edge Computing,Consulting | [Careers](https://www.yodiwo.gr/careers/) | [LinkedIn](https://www.linkedin.com/company/yodiwo) |
 
 ---
 ## Useful Search Queries
