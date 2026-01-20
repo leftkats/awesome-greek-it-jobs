@@ -207,6 +207,24 @@
   locations:
     - Athens
   work_policy: remote # hybrid
+- name: Marpoint
+  url: https://marpoint.gr/
+  sectors:
+  - Software Development
+  - IT Services
+  - AI
+  - Data
+  - Maritime
+  - Telecommunications
+  - 5G
+  - Network Infrastructure
+  - Networks
+  - IoT
+  careers_url: https://marpoint.gr/jobs/
+  linkedin_company_id: marpoint-ltd
+  locations:
+    - Athens
+  work_policy: hybrid
 - name: Mytilineos
   url: https://www.metlengroup.com/
   sectors:
