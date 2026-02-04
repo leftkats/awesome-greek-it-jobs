@@ -50,6 +50,15 @@
   locations:
     - Athens
   work_policy: hybrid
+- name: Capgemini
+  url: https://www.capgemini.com/
+  sectors:
+    - IT Services
+    - IT Consulting
+  careers_url: https://www.capgemini.com/careers/
+  linkedin_company_id: capgemini
+  locations: Thessaloniki
+  work_policy: On-site
 - name: DataScouting
   url: https://datascouting.com/
   sectors:
@@ -62,6 +71,15 @@
   locations:
     - Thessaloniki
   work_policy: hybrid
+- name: Dataviva
+  url: https://www.dataviva.com/
+  sectors:
+    - Software Development
+  careers_url: https://www.dataviva.com/careers/
+  linkedin_company_id: dataviva
+  locations:
+    - Thessaloniki
+  work_policy: On-site
 - name: D-one
   url: https://d-one.gr/
   sectors:
@@ -270,6 +288,15 @@
   locations:
     - Athens
   work_policy: hybrid # on-site
+- name: noris MIKE 
+  url: https://www.noris.gr/
+  sectors:
+    - IT Services
+    - IT Consulting
+  careers_url: https://www.noris.gr/jobs/
+  linkedin_company_id: noris-mike
+  locations:
+    - Thessaloniki
 - name: Novibet
   url: https://www.novibet.com/
   sectors:
