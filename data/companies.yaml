@@ -11,8 +11,8 @@
     - Trikala
 - name: PentaSoft
   sectors:
-    -  IT Services 
-    -  IT Consulting 
+    -  IT Services
+    -  IT Consulting
   linkedin_company_id: pentasoft-consulting-mae
   careers_url: https://pentasoft.gr/careers/
   url: https://pentasoft.gr/
@@ -21,8 +21,8 @@
     - Thessaloniki
 - name: bbv Greece
   sectors:
-    -  IT Services 
-    -  IT Consulting 
+    -  IT Services
+    -  IT Consulting
   linkedin_company_id: bbv-greece
   careers_url: https://en.bbv.ch/career/jobs/
   url: https://en.bbv.ch/
@@ -915,7 +915,7 @@
     - Digital Signage
   careers_url: https://www.yodeck.com/careers/
   linkedin_company_id: flipnode-llc
-- name: Allwyn
+- name: Allwyn Hellas
   url: https://www.allwyn.com/
   sectors:
     - Lottery
@@ -1621,3 +1621,155 @@
     - Athens
   linkedin_company_id: adecco
   work_policy: on-site
+- name: Keyrock
+  url: https://keyrock.com/
+  sectors:
+    - Fintech
+  careers_url: https://keyrock.com/careers/
+  locations:
+    - Athens
+  linkedin_company_id: keyrock
+  work_policy: remote
+- name: IQVIA
+  url: https://www.iqvia.com/
+  sectors:
+    - Healthcare
+  careers_url: https://jobs.iqvia.com/en/jobs
+  locations:
+    - Athens
+  linkedin_company_id: iqvia
+  work_policy: remote
+- name: Revolut
+  url: https://www.revolut.com/
+  sectors:
+    - Fintech
+  careers_url: https://www.revolut.com/careers/
+  locations:
+    - Athens
+  linkedin_company_id: revolut
+  work_policy: remote
+- name: Benefit Software
+  url: https://www.benefit.gr/
+  sectors:
+    - IT Services
+    - IT Consulting
+  careers_url: https://career.unipi.gr/career_cv/hmeres_stadiodromias_companies/company?benefit-software
+  locations:
+    - Athens
+  linkedin_company_id: benefit-software
+  work_policy: hybrid
+- name: HFM
+  url: https://careers.hfm.com/
+  sectors:
+    - Fintech
+    - Broker
+  careers_url: https://www.careers-hfm.com/
+  locations:
+    - Athens
+  linkedin_company_id: hfmbroker
+  work_policy: hybrid
+- name: Plentific
+  url: https://www.plentific.com/
+  sectors:
+    - Software Development
+  careers_url: https://www.plentific.com/careers/
+  locations:
+    - Athens
+  linkedin_company_id: plentific
+  work_policy: remote
+- name: Berkeley Square - Talent Specialists in IT & Engineering
+  url: https://bsqtalent.com/
+  sectors:
+    - IT Services
+    - IT Consulting
+  careers_url: https://bsqtalent.com/jobs/
+  locations:
+    - Athens
+  linkedin_company_id: bsqtalent
+  work_policy: hybrid
+- name: Circana
+  url: http://www.circana.com/
+  sectors:
+    - Market Research
+    - Data Analytics
+  careers_url: http://www.circana.com/
+  locations:
+    - Athens
+  linkedin_company_id: wearecircana
+  work_policy: hybrid
+- name: Superbet
+  url: https://super-bet.gr/
+  sectors:
+    - Igaming
+    - Betting
+  careers_url: https://grabjobs.co/greece/companies/superbet-5896493/jobs
+  locations:
+    - Athens
+  linkedin_company_id: superbet-international
+  work_policy: hybrid
+- name: Exalor
+  url: http://www.exalor.io/
+  sectors:
+    - Software Develoopment
+  locations:
+    - Athens
+  linkedin_company_id: exalor
+  work_policy: hybrid
+- name: Trafigura
+  url: https://www.trafigura.com/
+  sectors:
+    - Oil
+    - Gas
+  careers_url: https://www.trafigura.com/careers/
+  locations:
+    - Athens
+  linkedin_company_id: trafigura
+  work_policy: on-site
+- name: SHOPFLIX.gr
+  url: https://www.shopflix.gr/
+  sectors:
+    - Marktetplace
+    - E-commerce
+  careers_url: https://shopflix.gr/eykairies-karieras
+  locations:
+    - Athens
+  linkedin_company_id: shopflix-gr
+  work_policy: hybrid
+- name: Jobistas
+  url: https://jobistas.gr/
+  sectors:
+    - Recruitment
+    - Staffing
+  careers_url: https://jobistas.gr/open-positions/
+  locations:
+    - Athens
+  linkedin_company_id: jobistas
+  work_policy: hybrid
+- name: Costamare
+  url: https://www.costamare.com/our_managers_costamare_shipping
+  sectors:
+    - Maritime Transportation
+    - Shipping
+  careers_url: https://www.kariera.gr/companies/costamare
+  locations:
+    - Athens
+  linkedin_company_id: costamare
+  work_policy: on-site
+- name: MSD Greece
+  url: https://www.msd.gr/
+  sectors:
+    - Pharmaceuticals
+  careers_url: https://www.msd.gr/career/
+  locations:
+    - Athens
+  linkedin_company_id: msd-greece
+  work_policy: hybrid
+- name: Nova
+  url: http://www.nova.gr/company
+  sectors:
+    - Telecommunications
+  careers_url: https://career.nova.gr/career/job-opening/
+  locations:
+    - Athens
+  linkedin_company_id: novagreece
+  work_policy: hybrid
