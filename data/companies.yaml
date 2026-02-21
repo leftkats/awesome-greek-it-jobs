@@ -2045,3 +2045,23 @@
     - Thessaloniki
   linkedin_company_id: exandiainc
   work_policy: remote
+- name: Kuehne+Nagel
+  url: http://www.kuehne-nagel.com/
+  sectors:
+    - Transportation
+    - Logistics
+    - Supply Chain
+  locations:
+    - Schindellegi, Schwyz
+    - Thessaloniki
+  linkedin_company_id: kuehne-nagel
+  work_policy: hybrid
+- name: Einhell Digital Greece
+  url: http://einhell.digital/
+  sectors:
+    - IT Services
+    - IT Consulting
+  locations:
+    - Thessaloniki
+  linkedin_company_id: https://www.einhell.digital/
+  work_policy: Hybrid
