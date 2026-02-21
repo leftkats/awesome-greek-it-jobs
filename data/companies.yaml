@@ -4,13 +4,12 @@
   linkedin_company_id: feedthebet
   careers_url: https://feedthebet.com/career-opportunities
   url: https://feedthebet.com/
-  work_policy:
   locations:
     - Athens
     - Thessaloniki
-- name: GWF AG 
+- name: GWF AG
   sectors:
-    - Software Development 
+    - Software Development
     - Firmware Development
   linkedin_company_id: gwf-ag
   careers_url: https://erecruiter0017.kandidatenportal.eu/Jobs
@@ -18,9 +17,9 @@
   work_policy: hybrid
   locations:
     - Thessaloniki
-- name: Lancom Ltd 
+- name: Lancom Ltd
   sectors:
-    - IT Services 
+    - IT Services
     - IT Consulting
   linkedin_company_id: lancomltd
   careers_url:
