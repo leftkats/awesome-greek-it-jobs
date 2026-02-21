@@ -1,3 +1,44 @@
+- name: FeedTheBet
+  sectors:
+    - Software Development
+  linkedin_company_id: feedthebet
+  careers_url: https://feedthebet.com/career-opportunities
+  url: https://feedthebet.com/
+  work_policy:
+  locations:
+    - Athens
+    - Thessaloniki
+- name: GWF AG 
+  sectors:
+    - Software Development 
+    - Firmware Development
+  linkedin_company_id: gwf-ag
+  careers_url: https://erecruiter0017.kandidatenportal.eu/Jobs
+  url: https://gwf-group.com/en/
+  work_policy: hybrid
+  locations:
+    - Thessaloniki
+- name: Lancom Ltd 
+  sectors:
+    - IT Services 
+    - IT Consulting
+  linkedin_company_id: lancomltd
+  careers_url:
+  url: https://lancom.gr/
+  work_policy: hybrid
+  locations:
+    - Athens
+    - Thessaloniki
+- name: Archeiothiki
+  sectors:
+    - Information Services
+  linkedin_company_id: archeiothiki-sa
+  careers_url: https://archeiothiki.gr/career/
+  url: https://archeiothiki.gr/
+  work_policy: hybrid
+  locations:
+    - Athens
+    - Thessaloniki
 - name: OTS SA
   sectors:
     - Software Development
