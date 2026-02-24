@@ -2065,3 +2065,10 @@
     - Thessaloniki
   linkedin_company_id: https://www.einhell.digital/
   work_policy: Hybrid
+- name: Sportserver
+  url: https://www.sportserve.co/
+  sectors:
+    - Technology
+    - Internet
+  linkedin_company_id: asianlogic-ltd.---bayview-technologies
+  work_policy: hybrid
